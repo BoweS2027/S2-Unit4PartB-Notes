@@ -36,5 +36,30 @@ public class Main {
       toDo.add(1, "drink water");
       System.out.println(toDo); 
       //remember thatindexes start at 0
+      //list.get(index) returns the item
+      String firstItem=toDo.get(0);
+      System.out.println("do this first: " + firstItem);
+      //list.set(index,object) replaces
+      String replacedItem = toDo.set(0,"die");
+      System.out.println(toDo);
+      System.out.println("we replaced: " + replacedItem);
+      //list.remove(index) removes the item
+      String removedItem = toDo.remove(2);
+      System.out.println("toDo");
+      System.out.println("We removed the item: " + removedItem);
+      ArrayList<Integer> scores = new ArrayList<Integer>();
+      scores.add(22);
+      scores.add(22);
+      scores.add(22);
+      System.out.println(scores);
+      for(Integer currentScore : scores){
+         System.out.println("Test Score: " + currentScore);
+      }
+      double sum = 0;
+      for(Integer score : scores){
+         sum += score;
+      }
+      double avg = sum/scores.size();
+      System.out.println(avg);
    }
 }
